@@ -39,14 +39,15 @@ def SaveFileAndKey(filename,TheKey):
 
 		
 
-print('==============================')
-print('=  DoNotDeleteMyFile         =')
-print('=  2019.7.19                 =')
-print('=                            =')
-print('=  Fake Encrypt              =')
-print('=  For video, exe and so on  =')
-print('==============================')
-print('tip:you can drag file into the window and file path and file name will be autofilled')
+print('==================================')
+print('=  DoNotDeleteMyFile')            
+print('=  2019.7.19')                    
+print('=')                               
+print('=  假加密')                        
+print('=  适用于视频,Office文件,Exe等等') 
+print('==================================')
+print('输入文件路径+名称(例:C:\\Users\\123\\Desktop\\images.jpg),然后按Enter')
+print('tip:你可以直接把文件拖拽到窗口内,文件路径和名称会自动填写\n')
 
 while True:
 	filepath = ''
@@ -57,7 +58,6 @@ while True:
 		filepath=filepath.strip('"')
 	TheKey = GenerateTheKey()
 	filename = filepath.split("\\")[-1]
-	print(filename)
 	AddTheKey(filename,TheKey,filepath)
 	SaveFileAndKey(filename,TheKey)
 	
