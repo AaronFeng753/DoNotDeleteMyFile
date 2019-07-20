@@ -1,3 +1,4 @@
+#coding=utf-8
 import fileinput
 import re
 import random
@@ -7,10 +8,15 @@ import sys
 import os.path
 
 def DelTheKey(filename,TheKey):
+	print(TheKey)
 	f = open (filename, "rb+")
 	FileName=os.path.splitext(filename)[0]
 	FileExt=os.path.splitext(filename)[1]
-	open(FileName+'_Original'+FileExt, 'wb+').write(re.sub(bytes(TheKey,encoding = 'utf8'),bytes(),f.read()))
+	current_dir = os.path.dirname(os.path.abspath(__file__))
+	OriginalPath = current_dir + '\\Original\\'
+	if os.path.exists(OriginalPath) == False:
+		os.mkdir(OriginalPath)
+	open(OriginalPath+FileName+FileExt, 'wb+').write(re.sub(bytes(TheKey,encoding = 'utf8'),bytes(),f.read()))
 	f.close()
 	print("\nSuccess!\n")
 	
@@ -26,12 +32,12 @@ def ReadFileAndKey(filename):
 		if key == filename:
 			return str(value)
 
-print('=======================')
-print('=  DoNotDeleteMyFile  =')
-print('=  2019.7.19          =')
-print('=                     =')
-print('=  Delete The Key     =')
-print('=======================')
+print('===================================')
+print('=  DoNotDeleteMyFile              =')
+print('=  2019.7.19                      =')
+print('=                                 =')
+print('=  Delete The Key & Fake Decrypt  =')
+print('===================================')
 
 while True:
 	filename = ''
