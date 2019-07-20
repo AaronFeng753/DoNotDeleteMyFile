@@ -7,10 +7,7 @@ import json
 import sys
 import os.path
 
-# def AddTheKey(filename,TheKey):
-	# with open(filename,'a') as f:
-		# f.write(TheKey)
-	# print("\nSuccess!\n")
+
 def AddTheKey(filename,TheKeym,filepath):
 	f = open (filepath, "rb+")
 	FileName=os.path.splitext(filename)[0]
@@ -49,6 +46,7 @@ print('=  2019.7.19          =')
 print('=                     =')
 print('=  Add The Key        =')
 print('=======================')
+print('tip:you can drag file into the window and file path and file name will be autofilled')
 
 while True:
 	filepath = ''
