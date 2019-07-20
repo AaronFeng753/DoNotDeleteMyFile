@@ -53,6 +53,7 @@ while True:
 		filepath = str(sys.argv[1])
 	except IndexError:
 		filepath = input('file path&name: ')
+		filepath=filepath.strip('"')
 	TheKey = GenerateTheKey()
 	filename = filepath.split("\\")[-1]
 	print(filename)
