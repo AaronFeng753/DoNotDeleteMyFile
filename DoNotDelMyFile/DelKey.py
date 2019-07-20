@@ -31,13 +31,14 @@ def ReadFileAndKey(filename):
 		if key == filename:
 			return str(value)
 
-print('===================================')
-print('=  DoNotDeleteMyFile              =')
-print('=  2019.7.19                      =')
-print('=                                 =')
-print('=  Delete The Key & Fake Decrypt  =')
-print('===================================')
-print('tip:you can drag file into the window and file path and file name will be autofilled')
+print('=============================')
+print('=  DoNotDeleteMyFile')               
+print('=  2019.7.19')                       
+print('=')                                  
+print('=  删除文件内的Key & 假解密')          
+print('=============================')
+print('输入文件路径+名称(例:C:\\Users\\123\\Desktop\\images.jpg),然后按Enter')
+print('tip:你可以直接把文件拖拽到窗口内,文件路径和名称会自动填写\n')
 
 while True:
 	filepath = ''
