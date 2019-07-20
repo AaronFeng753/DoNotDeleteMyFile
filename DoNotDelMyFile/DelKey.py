@@ -44,6 +44,7 @@ while True:
 		filepath = str(sys.argv[1])
 	except IndexError:
 		filepath = input('file path&name: ')
+		filepath=filepath.strip('"')
 	filename = str(os.path.basename(filepath))
 	TheKey = ReadFileAndKey(filename)
 	DelTheKey(filename,TheKey,filepath)
