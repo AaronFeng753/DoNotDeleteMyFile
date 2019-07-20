@@ -7,9 +7,8 @@ import json
 import sys
 import os.path
 
-def DelTheKey(filename,TheKey):
-	print(TheKey)
-	f = open (filename, "rb+")
+def DelTheKey(filename,TheKey,filepath):
+	f = open (filepath, "rb+")
 	FileName=os.path.splitext(filename)[0]
 	FileExt=os.path.splitext(filename)[1]
 	current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -40,12 +39,13 @@ print('=  Delete The Key & Fake Decrypt  =')
 print('===================================')
 
 while True:
-	filename = ''
+	filepath = ''
 	try:
-		filename = str(sys.argv[1])
+		filepath = str(sys.argv[1])
 	except IndexError:
-		filename = input('file name: ')
-	filename = str(os.path.basename(filename))
+		filepath = input('file path&name: ')
+	filename = str(os.path.basename(filepath))
 	TheKey = ReadFileAndKey(filename)
-	DelTheKey(filename,TheKey)
+	DelTheKey(filename,TheKey,filepath)
+
 	
