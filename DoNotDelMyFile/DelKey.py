@@ -37,6 +37,7 @@ print('=  2019.7.19                      =')
 print('=                                 =')
 print('=  Delete The Key & Fake Decrypt  =')
 print('===================================')
+print('tip:you can drag file into the window and file path and file name will be autofilled')
 
 while True:
 	filepath = ''
