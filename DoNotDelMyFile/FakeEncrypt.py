@@ -29,7 +29,7 @@ def SaveFileAndKey(filename,TheKey):
 	FileAndKey={}
 	try:
 		with open('FileAndKey.json','r') as f:
-			FileAndKey=json.load(f,ensure_ascii=False)
+			FileAndKey=json.load(f)
 	except FileNotFoundError:
 		with open('FileAndKey.json','w+') as f:
 			f.write('{}')
