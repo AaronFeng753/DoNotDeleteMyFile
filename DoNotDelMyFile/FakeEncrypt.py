@@ -46,6 +46,7 @@ print('=                            =')
 print('=  Fake Encrypt              =')
 print('=  For video, exe and so on  =')
 print('==============================')
+print('tip:you can drag file into the window and file path and file name will be autofilled')
 
 while True:
 	filepath = ''
