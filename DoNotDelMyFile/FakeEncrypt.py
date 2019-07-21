@@ -41,7 +41,7 @@ def SaveFileAndKey(filename,TheKey):
 
 print('==================================')
 print('=  DoNotDeleteMyFile')            
-print('=  2019.7.19')                    
+print('=  2019.7.21')                    
 print('=')                               
 print('=  假加密')                        
 print('=  适用于视频,Office文件,Exe等等') 
