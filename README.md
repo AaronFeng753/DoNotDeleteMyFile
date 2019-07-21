@@ -11,9 +11,11 @@ DoNotDeleteMyFile-规避网盘文件和谐
  
  AddKey.py负责向文件末尾添加key, key由软件自己随机生成, 输入文件所在路径+文件名后按回车即可, 处理成功后提示'Success!!',被加入key的文件将保存在'KeyAdded'文件夹内.(该文件夹和脚本在同一文件夹内)
  
- Delkey.py负责删除之前添加的Key, 同样输入文件所在路径+文件名后按回车即可, 处理成功后提示'Success!!',被去除key的文件将保存在'Original'文件夹内.(该文件夹和脚本在同一文件夹内)
+ Delkey.py负责删除之前添加的Key(AddKey和FakeEncrypt的key均可以), 同样输入文件所在路径+文件名后按回车即可, 处理成功后提示'Success!!',被去除key的文件将保存在'Original'文件夹内.(该文件夹和脚本在同一文件夹内)
  
  新增的FakeEncrypt.py在文件开头加入一串随机生成的Key, 阻止审查者直接读取文件, 对简单的批量审查较为有效, 审查者会认为这是一个损坏的无效文件放弃审查, 同时也可以改变文件的md5,CRC等特征值, 主要适用于视频, word等. 使用时输入文件所在路径+文件名后按回车即可, 处理成功后提示'Success!!',被"假加密"的文件将保存在'FakeEncrypted'文件夹内.(该文件夹和脚本在同一文件夹内)
+ 
+ 运行AddKey和FakeEncrypt后会生成 FileAndKey.json , 该文件的作用是记录之前生成的key和对应的文件名, 方便以后使用Delkey来删除key, 请勿删除该文件, 如果误删, 请用 notepad++或者Windows自带记事本等软件手动打开文件, 自行删除添加的key, key的格式为:'#DoNotDelMyFile//随机数字#'
  
  # 免责声明
  
