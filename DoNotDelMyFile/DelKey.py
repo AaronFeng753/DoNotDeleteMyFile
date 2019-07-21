@@ -33,7 +33,7 @@ def ReadFileAndKey(filename):
 
 print('=============================')
 print('=  DoNotDeleteMyFile')               
-print('=  2019.7.19')                       
+print('=  2019.7.21')                       
 print('=')                                  
 print('=  删除文件内的Key & 假解密')          
 print('=============================')
