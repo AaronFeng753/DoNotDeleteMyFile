@@ -42,7 +42,7 @@ def SaveFileAndKey(filename,TheKey):
 
 print('=======================')
 print('=  DoNotDeleteMyFile') 
-print('=  2019.7.19') 
+print('=  2019.7.21') 
 print('=') 
 print('=  向文件末尾添加Key') 
 print('=======================')
